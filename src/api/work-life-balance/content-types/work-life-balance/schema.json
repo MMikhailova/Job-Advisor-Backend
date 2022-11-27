@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "work_life_balances",
+  "info": {
+    "singularName": "work-life-balance",
+    "pluralName": "work-life-balances",
+    "displayName": "Work-life-balance",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "remote",
+        "office",
+        "hybrid"
+      ]
+    },
+    "workingHours": {
+      "type": "richtext"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "company": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::company.company",
+      "inversedBy": "work_life_balances"
+    }
+  }
+}

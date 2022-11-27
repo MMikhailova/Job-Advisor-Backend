@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "benefits_compensations",
+  "info": {
+    "singularName": "benefits-compensation",
+    "pluralName": "benefits-compensations",
+    "displayName": "Benefits-compensation",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "Health insurance offerings (medical, dental, vision)",
+        "Life insurance",
+        "Parental leave",
+        "Stock options",
+        "Retirement plans",
+        "Vacation and sick time",
+        "Overtime pay"
+      ]
+    },
+    "money": {
+      "type": "biginteger"
+    },
+    "condition": {
+      "type": "richtext"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "seniority": {
+      "type": "string"
+    },
+    "company": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::company.company",
+      "inversedBy": "benefits_compensations"
+    }
+  }
+}

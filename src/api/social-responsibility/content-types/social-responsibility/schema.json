@@ -1,0 +1,51 @@
+{
+  "kind": "collectionType",
+  "collectionName": "social_responsibilities",
+  "info": {
+    "singularName": "social-responsibility",
+    "pluralName": "social-responsibilities",
+    "displayName": "Sustainability ",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "Environmental Responsibility",
+        "Ethical Responsibility",
+        "Philanthropic Responsibility",
+        "Economic Responsibility"
+      ]
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "impact": {
+      "type": "richtext"
+    },
+    "image": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "company": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::company.company",
+      "inversedBy": "social_responsibilities"
+    }
+  }
+}
