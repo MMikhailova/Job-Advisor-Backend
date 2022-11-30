@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "reviews",
+  "info": {
+    "singularName": "review",
+    "pluralName": "reviews",
+    "displayName": "Review",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "start": {
+      "max": 5,
+      "default": 0,
+      "min": 1,
+      "type": "integer",
+      "required": true
+    },
+    "employee": {
+      "type": "boolean",
+      "required": true
+    },
+    "jobTitle": {
+      "type": "string"
+    }
+  }
+}
