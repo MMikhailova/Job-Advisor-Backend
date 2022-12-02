@@ -90,6 +90,12 @@
       "relation": "oneToMany",
       "target": "api::work-life-balance.work-life-balance",
       "mappedBy": "company"
+    },
+    "reviews": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::review.review",
+      "mappedBy": "company"
     }
   }
 }
